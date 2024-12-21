@@ -1,0 +1,25 @@
+nav {
+  background-color: #45474b;
+  color: #fad72c;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav .nav-link {
+  text-decoration: none;
+  color: #fad72c;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav .nav-link:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,17 @@
+.footer {
+  background-color: #45474b;
+  color: #fad72c;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+  color: #fad72c;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #fff;
+}
