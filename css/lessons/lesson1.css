@@ -29,18 +29,75 @@ section {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: #45474b;
   margin-bottom: 10px;
 }
 
+/* Estilo para listas */
+ul,
+ol {
+  margin: 20px auto; /* Centraliza a lista na página */
+  padding: 0;
+  max-width: 80%; /* Define a largura máxima */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+ul li,
+ol li {
+  margin-bottom: 10px; /* Espaço entre os itens */
+  font-size: 1rem; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
+  padding: 5px 10px; /* Espaço interno */
+}
+
+.list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Estilo para imagens */
+.result img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para tabelas */
+.result table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  text-align: left;
+  table-layout: fixed; /* Define larguras fixas para as células */
+}
+
+.result th,
+.result td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  word-wrap: break-word; /* Garante que o texto quebre dentro das células */
+}
+
+.result th {
+  background-color: #fad72c;
+  color: #45474b;
+  font-weight: bold;
+}
+
+.result td {
+  background-color: #fff;
+}
+
 .explanation {
-  border: 1px solid #45474b;
   color: #45474b;
   padding: 10px;
-  border-radius: 8px;
   margin-bottom: 20px;
-  font-size: 0.9rem;
   line-height: 1.5;
   width: 80%;
   margin: 20px auto;
