@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 4: CSS - Alinhamento e Flexbox</title>
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/buttons.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson4.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Introdução</a>
+      </h1>
+    </nav>
+    <main>
+      <h1>Aula 4: Alinhamento com Flexbox</h1>
+      <p>
+        Nesta aula, vamos aprender sobre alinhamento de itens usando CSS
+        Flexbox. Trabalharemos com as propriedades <code>justify-content</code>,
+        <code>align-items</code> e <code>flex-direction</code>.
+      </p>
+
+      <section>
+        <h2>Exercício 1: Justify Content</h2>
+        <p>
+          A propriedade <code>justify-content</code> alinha itens no eixo
+          principal (horizontal por padrão). As opções incluem:
+        </p>
+        <ul>
+          <li><code>flex-start</code>: Alinha os itens no início.</li>
+          <li><code>flex-end</code>: Alinha os itens no final.</li>
+          <li><code>center</code>: Centraliza os itens.</li>
+          <li><code>space-between</code>: Espaça uniformemente os itens.</li>
+          <li>
+            <code>space-around</code>: Espaça os itens com margem ao redor.
+          </li>
+        </ul>
+        <div class="example" id="justify-example">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+        <p>
+          Tente aplicar diferentes valores de <code>justify-content</code> no
+          exercício abaixo:
+        </p>
+        <div class="exercise" id="justify-exercise">
+          <div class="box">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Exercício 2: Align Items</h2>
+        <p>
+          A propriedade <code>align-items</code> alinha os itens no eixo
+          transversal (vertical por padrão). As opções incluem:
+        </p>
+        <ul>
+          <li><code>flex-start</code>: Alinha os itens no topo.</li>
+          <li><code>flex-end</code>: Alinha os itens na base.</li>
+          <li><code>center</code>: Centraliza os itens.</li>
+          <li>
+            <code>stretch</code>: Estica os itens para preencher o container.
+          </li>
+        </ul>
+        <div class="example" id="align-example">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+        <p>
+          Tente aplicar diferentes valores de <code>align-items</code> no
+          exercício abaixo:
+        </p>
+        <div class="exercise" id="align-exercise">
+          <div class="box">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Exercício 3: Flex Direction</h2>
+        <p>
+          A propriedade <code>flex-direction</code> define a direção dos itens
+          no container. As opções incluem:
+        </p>
+        <ul>
+          <li><code>row</code>: Itens dispostos em linha (padrão).</li>
+          <li><code>row-reverse</code>: Itens em linha, mas invertidos.</li>
+          <li><code>column</code>: Itens dispostos em coluna.</li>
+          <li><code>column-reverse</code>: Itens em coluna, mas invertidos.</li>
+        </ul>
+        <div class="example" id="direction-example">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+        <p>
+          Tente aplicar diferentes valores de <code>flex-direction</code> no
+          exercício abaixo:
+        </p>
+        <div class="exercise" id="direction-exercise">
+          <div class="box">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Exercício 4: Combinação de Propriedades</h2>
+        <p>
+          Experimente combinar <code>justify-content</code>,
+          <code>align-items</code> e <code>flex-direction</code> para criar
+          layouts mais complexos.
+        </p>
+        <div class="example" id="combined-example">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+        <p>
+          Crie um layout com as propriedades combinadas no exercício abaixo:
+        </p>
+        <div class="exercise" id="combined-exercise">
+          <div class="box">A</div>
+          <div class="box">B</div>
+          <div class="box">C</div>
+        </div>
+      </section>
+
+      <button onclick="window.location.href='../index.html'" class="button">
+        Voltar para Página Inicial
+      </button>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

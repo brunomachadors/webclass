@@ -1,0 +1,116 @@
+/* Estilos globais */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+section {
+  margin: 40px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #45474b;
+}
+
+/* Estilos dos exemplos */
+.example,
+.exercise {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: #fad72c;
+  color: #45474b;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Justify-content exemplo */
+#justify-example {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Align-items exemplo */
+#align-example {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px;
+}
+
+/* Flex-direction exemplo */
+#direction-example {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Combinação de propriedades */
+#combined-example {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 150px;
+}
+
+/* Exercícios */
+
+/* Justify-content exercício */
+#justify-exercise {
+  display: flex;
+  /* Adicione as propriedades necessárias aqui */
+}
+
+/* Align-items exercício */
+#align-exercise {
+  display: flex;
+  /* Adicione as propriedades necessárias aqui */
+}
+
+/* Flex-direction exercício */
+#direction-exercise {
+  display: flex;
+  /* Adicione as propriedades necessárias aqui */
+}
+
+/* Combinação de propriedades exercício */
+#combined-exercise {
+  display: flex;
+  /* Adicione as propriedades necessárias aqui */
+}
