@@ -25,9 +25,8 @@
       <section>
         <h2>Títulos</h2>
         <div class="explanation">
-          Os títulos são definidos pelas tags <code>&lt;h1&gt;</code> até
-          <code>&lt;h6&gt;</code>. Quanto menor o número, maior o tamanho do
-          título.
+          Os títulos são definidos pelas tags <b>H1</b> até <b>H6</b>.
+          <br />Quanto menor o número, maior o tamanho do título.
         </div>
         <pre class="code-block">
 <code>&lt;h1&gt;H1: Mundial do Grêmio de 1983&lt;/h1&gt;
@@ -52,40 +51,22 @@
         <h2>Parágrafos</h2>
         <div class="explanation">
           Parágrafos são usados para textos mais longos e são criados com a tag
-          <code>&lt;p&gt;</code>.
+          <b>P</b>.
         </div>
         <pre class="code-block">
-<code>&lt;p&gt;"Programar é como cozinhar: você começa com a receita, mas termina improvisando."&lt;/p&gt;
-&lt;p&gt;"Front-end é como mágica: você impressiona os outros, mas sabe que é tudo gambiarra."&lt;/p&gt;
-&lt;p&gt;"Debugging: o processo de remover o bug do código e, em seguida, adicionar mais dois no lugar."&lt;/p&gt;
-&lt;p&gt;"HTML sem CSS é como um bolo sem cobertura: funcional, mas sem graça."&lt;/p&gt;
-</code>
-      </pre>
+      <code>&lt;p&gt;"Não concordo, nem discordo, muito pelo contrário."&lt;/p&gt;</code>
+        </pre>
         <div class="result">
-          <p>
-            "Programar é como cozinhar: você começa com a receita, mas termina
-            improvisando."
-          </p>
-          <p>
-            "Front-end é como mágica: você impressiona os outros, mas sabe que é
-            tudo gambiarra."
-          </p>
-          <p>
-            "Debugging: o processo de remover o bug do código e, em seguida,
-            adicionar mais dois no lugar."
-          </p>
-          <p>
-            "HTML sem CSS é como um bolo sem cobertura: funcional, mas sem
-            graça."
-          </p>
+          <p>Não concordo, nem discordo, muito pelo contrário.</p>
         </div>
       </section>
 
       <section>
         <h2>Textos com Estilo</h2>
         <div class="explanation">
-          Você pode estilizar o texto com tags específicas, como negrito,
-          itálico e sublinhado.
+          Você pode estilizar o texto com tags específicas, como negrito
+          <b>Strong</b>, itálico <b>EM</b>, sublinhado <b>U</b> e riscado
+          <b>S</b>.
         </div>
         <pre class="code-block">
 <code>&lt;p&gt;&lt;strong&gt;Negrito:&lt;/strong&gt; Este texto está usando a tag &lt;strong&gt;.&lt;/p&gt;
@@ -113,8 +94,149 @@
         </div>
       </section>
 
+      <section>
+        <h2>Listas</h2>
+        <div class="explanation">
+          Listas são usadas para agrupar itens relacionados. Existem dois tipos
+          principais: listas ordenadas (numeradas) e listas não ordenadas (com
+          marcadores).
+        </div>
+        <pre class="code-block">
+          <code>
+            &lt;ol&gt;
+              &lt;h4&gt;Como ficar milhonário?&lt;/h4&gt;
+              &lt;li&gt;&lt;s&gt;Estudar muito&lt;/s&gt; (não funcionou)&lt;/li&gt;
+              &lt;li&gt;&lt;s&gt;Trabalhar&lt;/s&gt; (não funcionou)&lt;/li&gt;
+              &lt;li&gt;&lt;s&gt;Investir&lt;/s&gt; (não funcionou)&lt;/li&gt;
+              &lt;li&gt;Ser herdeiro&lt;/li&gt;
+              &lt;li&gt;Não fazer nada&lt;/li&gt;
+            &lt;/ol&gt;
+            
+            &lt;ul&gt;
+              &lt;h4&gt;Coisas para não fazer em um apocalipse zumbi&lt;/h4&gt;
+              &lt;li&gt;Um piquenique ao ar livre.&lt;/li&gt;
+              &lt;li&gt;Ir ao shopping.&lt;/li&gt;
+              &lt;li&gt;Pular o treino de cardio.&lt;/li&gt;
+              &lt;li&gt;Esquecer a munição em casa.&lt;/li&gt;
+            &lt;/ul&gt;
+          </code>
+        </pre>
+        <div class="list-container">
+          <h3>Lista Ordenada</h3>
+          <h4>Como ficar milhonário?</h4>
+          <ol>
+            <li><s>Estudar muito</s> (não funcionou)</li>
+            <li><s>Trabalhar</s> (não funcionou)</li>
+            <li><s>Investir</s> (não funcionou)</li>
+            <li>Ser herdeiro</li>
+            <li>Não fazer nada</li>
+          </ol>
+          <h3>Lista Não Ordenada</h3>
+          <h4>Coisas para não fazer em um apocalipse zumbi</h4>
+          <ul>
+            <li>Um piquenique ao ar livre.</li>
+            <li>Ir ao shopping.</li>
+            <li>Pular o treino de cardio.</li>
+            <li>Esquecer a munição em casa.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Imagens</h2>
+        <div class="explanation">
+          Imagens são adicionadas com a tag <b>IMG</b>. O atributo
+          <b>SRC</b> define o caminho da imagem, e o <b>ALT</b> descreve a
+          imagem.
+        </div>
+        <pre class="code-block">
+          <code>&lt;img src="https://res.cloudinary.com/dtglidvcw/image/upload/v1734797276/webaula/profile.jpg alt="Homem levemente embriagado"" /&gt;</code>
+        </pre>
+        <div class="result">
+          <img
+            src="https://res.cloudinary.com/dtglidvcw/image/upload/v1734797276/webaula/profile.jpg"
+            alt="Homem levemente embriagado"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Links</h2>
+        <div class="explanation">
+          Links são criados com a tag <b>A</b> e podem apontar para outras
+          páginas ou sites. Use o atributo <b>HREF</b> para definir o endereço
+          do link.
+        </div>
+        <pre class="code-block">
+          <code>&lt;a href="https://brunomachadors.github.io/bugbuster/" target="_blank"&gt;Bug Buster&lt;/a&gt;</code>
+        </pre>
+        <div class="result">
+          <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+            >Bug Buster</a
+          >
+        </div>
+      </section>
+
+      <section>
+        <h2>Tabelas</h2>
+        <div class="explanation">
+          Tabelas são criadas com a tag <b>TABLE</b>, com linhas (<b>TR</b>) e
+          colunas (<b>TH</b> e <b>TD</b>).
+        </div>
+        <pre class="code-block">
+      <code>
+      &lt;table&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Pessoa&lt;/th&gt;
+          &lt;th&gt;Dias sem sair da dieta&lt;/th&gt;
+          &lt;th&gt;Tentativas de fugir da academia&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Ana&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Bruno&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;15&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Carlos&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      </code>
+        </pre>
+        <div class="result">
+          <table>
+            <tr>
+              <th>Pessoa</th>
+              <th>Dias sem sair da dieta</th>
+              <th>Tentativas de fugir da academia</th>
+            </tr>
+            <tr>
+              <td>Ana</td>
+              <td>3</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Bruno</td>
+              <td>0</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Carlos</td>
+              <td>10</td>
+              <td>2</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
       <button onclick="window.location.href='../index.html'" class="button">
-        Voltar para Página Inicial
+        Voltar
       </button>
     </main>
     <footer class="footer">

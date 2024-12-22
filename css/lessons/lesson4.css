@@ -32,6 +32,24 @@ h2 {
   color: #45474b;
 }
 
+/* Estilo para listas */
+ul,
+ol {
+  list-style-position: inside;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 80%;
+  text-align: left;
+}
+
+ul li,
+ol li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+  padding: 5px 10px;
+}
+
 /* Estilos dos exemplos */
 .example,
 .exercise {
