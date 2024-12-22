@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 1: Elementos Básicos de HTML</title>
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson1.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Introdução</a>
+      </h1>
+    </nav>
+    <main>
+      <h1>Aula 1: Elementos Básicos de HTML</h1>
+      <p>
+        Vamos explorar os principais elementos do HTML! Você verá como
+        diferentes tipos de tags funcionam e para que servem.
+      </p>
+
+      <section>
+        <h2>Títulos</h2>
+        <div class="explanation">
+          Os títulos são definidos pelas tags <code>&lt;h1&gt;</code> até
+          <code>&lt;h6&gt;</code>. Quanto menor o número, maior o tamanho do
+          título.
+        </div>
+        <div>
+          <h1>H1: Mundial do Grêmio de 1983</h1>
+          <h2>H2: Mundial do São Paulo de 1993</h2>
+          <h3>H3: A Libertadores do Flamengo em 2019</h3>
+          <h4>H4: O Brasileirão do Palmeiras de 2018</h4>
+          <h5>H5: A Copa do Brasil do Cruzeiro em 2000</h5>
+          <h6>H6: O Mundial do Corinthians de 2000</h6>
+        </div>
+      </section>
+
+      <section>
+        <h2>Parágrafos</h2>
+        <div class="explanation">
+          Parágrafos são usados para textos mais longos e são criados com a tag
+          <code>&lt;p&gt;</code>.
+        </div>
+        <p>
+          Exemplo de parágrafo: "HTML é a linguagem padrão para criação de
+          páginas web."
+        </p>
+      </section>
+
+      <section>
+        <h2>Links</h2>
+        <div class="explanation">
+          Links são criados com a tag <code>&lt;a&gt;</code> e podem apontar
+          para outros sites ou páginas.
+        </div>
+        <a href="https://www.google.com" target="_blank"
+          >Este é um link para o Google</a
+        >
+      </section>
+
+      <section>
+        <h2>Imagens</h2>
+        <div class="explanation">
+          Para adicionar imagens, usamos a tag <code>&lt;img&gt;</code>. O
+          atributo <code>src</code> define o caminho da imagem, e o
+          <code>alt</code> descreve a imagem.
+        </div>
+        <img
+          src="https://via.placeholder.com/200"
+          alt="Exemplo de imagem"
+          style="border: 1px solid #000"
+        />
+      </section>
+
+      <section>
+        <h2>Listas</h2>
+        <div class="explanation">
+          Existem dois tipos principais de listas: ordenadas
+          (<code>&lt;ol&gt;</code>) e não ordenadas (<code>&lt;ul&gt;</code>).
+        </div>
+        <div>
+          <h3>Lista Ordenada</h3>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ol>
+          <h3>Lista Não Ordenada</h3>
+          <ul>
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formulários</h2>
+        <div class="explanation">
+          Formulários permitem a coleta de dados do usuário e são criados com a
+          tag <code>&lt;form&gt;</code>. Aqui estão alguns exemplos de campos
+          comuns:
+        </div>
+        <form action="#" method="POST">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+          <br />
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" />
+          <br />
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem"></textarea>
+          <br />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Divisores</h2>
+        <div class="explanation">
+          A tag <code>&lt;hr&gt;</code> é usada para criar divisores
+          horizontais.
+        </div>
+        <hr />
+      </section>
+
+      <section>
+        <h2>Tabelas</h2>
+        <div class="explanation">
+          Tabelas são criadas com as tags <code>&lt;table&gt;</code>,
+          <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> e
+          <code>&lt;td&gt;</code>.
+        </div>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Profissão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>João</td>
+              <td>30</td>
+              <td>Engenheiro</td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>25</td>
+              <td>Designer</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
