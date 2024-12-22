@@ -1,0 +1,53 @@
+/* Botão padrão */
+.button {
+  padding: 10px 20px;
+  background-color: #45474b;
+  color: #fad72c;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Hover para botão padrão */
+.button:hover {
+  background-color: #fad72c;
+  color: #45474b;
+  transform: scale(1.05);
+}
+
+/* Botão com borda */
+.button.outlined {
+  background-color: transparent;
+  border: 2px solid #45474b;
+  color: #45474b;
+}
+
+.button.outlined:hover {
+  background-color: #45474b;
+  color: #fad72c;
+}
+
+/* Botão secundário */
+.button.secondary {
+  background-color: #fad72c;
+  color: #45474b;
+}
+
+.button.secondary:hover {
+  background-color: #333;
+  color: #fad72c;
+}
+
+/* Botão desativado */
+.button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: none;
+}

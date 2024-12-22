@@ -1,0 +1,37 @@
+main {
+  flex: 1;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.lesson-list li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fad72c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.lesson-list li:hover {
+  transform: scale(1.05);
+  background-color: #45474b;
+}
+
+.lesson-list li a {
+  text-decoration: none;
+  color: #45474b;
+  font-weight: bold;
+}
+
+.lesson-list li:hover a {
+  color: #fad72c;
+}
