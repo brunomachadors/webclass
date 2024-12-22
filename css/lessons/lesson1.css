@@ -14,7 +14,7 @@ main {
   flex: 1;
   margin: 20px auto;
   width: 90%;
-  max-width: 800px;
+  max-width: 1200px;
   padding: 20px;
 }
 
@@ -136,13 +136,35 @@ hr {
 }
 
 .explanation {
-  background-color: #45474b;
-  color: #fff;
+  border: 1px solid #45474b;
+  color: #45474b;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 20px;
   font-size: 0.9rem;
   line-height: 1.5;
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+pre.code-block {
+  background-color: #2d2d2d;
+  color: #fad72c;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  display: block;
+  line-height: 1.5;
 }

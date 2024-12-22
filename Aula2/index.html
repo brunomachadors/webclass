@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 2: Formulários</title>
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson2.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Introdução</a>
+      </h1>
+    </nav>
+    <main>
+      <h1>Aula 2: Formulários</h1>
+      <p>
+        Vamos explorar como criar formulários com diversos tipos de campos para
+        coletar informações do usuário.
+      </p>
+
+      <!-- Campo de Nome -->
+      <section>
+        <h2>Campo de Nome</h2>
+        <div class="explanation">
+          O campo de nome é usado para coletar o nome completo do usuário.
+        </div>
+        <pre class="code-block">
+<code>&lt;label for="nome"&gt;Nome Completo:&lt;/label&gt;
+&lt;input 
+  type="text" 
+  id="nome" 
+  name="nome" 
+  placeholder="Seu nome completo" 
+  required 
+/&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <label for="nome">Nome Completo:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome completo"
+              required
+            />
+          </form>
+        </div>
+      </section>
+
+      <!-- Campo de Email -->
+      <section>
+        <h2>Campo de Email</h2>
+        <div class="explanation">
+          O campo de email é usado para coletar o endereço de email do usuário.
+        </div>
+        <pre class="code-block">
+<code>&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input 
+  type="email" 
+  id="email" 
+  name="email" 
+  placeholder="exemplo@dominio.com" 
+  required 
+/&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@dominio.com"
+              required
+            />
+          </form>
+        </div>
+      </section>
+
+      <!-- Campo de Senha -->
+      <section>
+        <h2>Campo de Senha</h2>
+        <div class="explanation">
+          O campo de senha é usado para criar uma senha segura.
+        </div>
+        <pre class="code-block">
+<code>&lt;label for="senha"&gt;Senha:&lt;/label&gt;
+&lt;input 
+  type="password" 
+  id="senha" 
+  name="senha" 
+  placeholder="Crie uma senha segura" 
+  required 
+/&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Crie uma senha segura"
+              required
+            />
+          </form>
+        </div>
+      </section>
+
+      <!-- Campo de Seleção de País -->
+      <section>
+        <h2>Seleção de País</h2>
+        <div class="explanation">
+          Este campo permite ao usuário selecionar um país em uma lista.
+        </div>
+        <pre class="code-block">
+<code>&lt;label for="pais"&gt;País:&lt;/label&gt;
+&lt;select 
+  id="pais" 
+  name="pais"&gt;
+  &lt;option value=""&gt;Selecione um país&lt;/option&gt;
+  &lt;option value="brasil"&gt;Brasil&lt;/option&gt;
+  &lt;option value="estados-unidos"&gt;Estados Unidos&lt;/option&gt;
+  &lt;option value="canada"&gt;Canadá&lt;/option&gt;
+  &lt;option value="alemanha"&gt;Alemanha&lt;/option&gt;
+  &lt;option value="franca"&gt;França&lt;/option&gt;
+  &lt;option value="italia"&gt;Itália&lt;/option&gt;
+  &lt;option value="japao"&gt;Japão&lt;/option&gt;
+  &lt;option value="china"&gt;China&lt;/option&gt;
+  &lt;option value="australia"&gt;Austrália&lt;/option&gt;
+  &lt;option value="india"&gt;Índia&lt;/option&gt;
+&lt;/select&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+              <option value="">Selecione um país</option>
+              <option value="brasil">Brasil</option>
+              <option value="estados-unidos">Estados Unidos</option>
+              <option value="canada">Canadá</option>
+              <option value="alemanha">Alemanha</option>
+              <option value="franca">França</option>
+              <option value="italia">Itália</option>
+              <option value="japao">Japão</option>
+              <option value="china">China</option>
+              <option value="australia">Austrália</option>
+              <option value="india">Índia</option>
+            </select>
+          </form>
+        </div>
+      </section>
+
+      <!-- Gosta mais de que? -->
+      <section>
+        <h2>O que gosta mais?</h2>
+        <div class="explanation">
+          Esta pergunta permite ao usuário escolher entre as opções usando
+          botões de rádio.
+        </div>
+        <pre class="code-block">
+      <code>&lt;fieldset&gt;
+        &lt;legend&gt;O que gosta mais?&lt;/legend&gt;
+        &lt;div class="radio-group"&gt;
+          &lt;label&gt;
+            &lt;input 
+              type="radio" 
+              name="preferencia" 
+              value="mais-de-estudar" 
+              checked 
+            /&gt; Mais de estudar
+          &lt;/label&gt;
+          &lt;label&gt;
+            &lt;input 
+              type="radio" 
+              name="preferencia" 
+              value="mais-de-batata" 
+            /&gt; Mais de batata
+          &lt;/label&gt;
+          &lt;label&gt;
+            &lt;input 
+              type="radio" 
+              name="preferencia" 
+              value="mais-de-estudar-e-batata" 
+            /&gt; Mais de estudar e mais de batata
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <fieldset>
+              <legend>O que gosta mais?</legend>
+              <div class="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="preferencia"
+                    value="mais-de-estudar"
+                    checked
+                  />
+                  Mais de estudar
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="preferencia"
+                    value="mais-de-batata"
+                  />
+                  Mais de batata
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="preferencia"
+                    value="mais-de-estudar-e-batata"
+                  />
+                  Mais de estudar e mais de batata
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <!-- Interesses -->
+      <section>
+        <h2>Interesses</h2>
+        <div class="explanation">
+          Use caixas de seleção para capturar os interesses do usuário.
+        </div>
+        <pre class="code-block">
+<code>&lt;fieldset&gt;
+  &lt;legend&gt;Interesses:&lt;/legend&gt;
+  &lt;div class="checkbox-group"&gt;
+    &lt;label&gt;
+      &lt;input 
+        type="checkbox" 
+        name="interesses" 
+        value="tecnologia" 
+      /&gt; Tecnologia
+    &lt;/label&gt;
+    &lt;label&gt;
+      &lt;input 
+        type="checkbox" 
+        name="interesses" 
+        value="ciencia" 
+      /&gt; Ciência
+    &lt;/label&gt;
+    &lt;label&gt;
+      &lt;input 
+        type="checkbox" 
+        name="interesses" 
+        value="arte" 
+      /&gt; Arte
+    &lt;/label&gt;
+    &lt;label&gt;
+      &lt;input 
+        type="checkbox" 
+        name="interesses" 
+        value="musica" 
+      /&gt; Música
+    &lt;/label&gt;
+    &lt;label&gt;
+      &lt;input 
+        type="checkbox" 
+        name="interesses" 
+        value="esportes" 
+      /&gt; Esportes
+    &lt;/label&gt;
+    &lt;label&gt;
+      &lt;input 
+        type="checkbox" 
+        name="interesses" 
+        value="literatura" 
+      /&gt; Literatura
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <fieldset>
+              <legend>Interesses:</legend>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="interesses" value="tecnologia" />
+                  Tecnologia
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="ciencia" />
+                  Ciência
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="arte" />
+                  Arte
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="musica" />
+                  Música
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="esportes" />
+                  Esportes
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="literatura" />
+                  Literatura
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <!-- Mensagem -->
+      <section>
+        <h2>Mensagem</h2>
+        <div class="explanation">
+          Este campo permite que o usuário escreva uma mensagem longa.
+        </div>
+        <pre class="code-block">
+<code>&lt;label for="mensagem"&gt;Mensagem:&lt;/label&gt;
+&lt;textarea 
+  id="mensagem" 
+  name="mensagem" 
+  rows="4" 
+  placeholder="Escreva sua mensagem aqui..."
+&gt;&lt;/textarea&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              placeholder="Escreva sua mensagem aqui..."
+            ></textarea>
+          </form>
+        </div>
+      </section>
+
+      <!-- Upload de Arquivo -->
+      <section>
+        <h2>Upload de Arquivo</h2>
+        <div class="explanation">
+          Este campo permite que o usuário envie arquivos.
+        </div>
+        <pre class="code-block">
+<code>&lt;label for="arquivo"&gt;Envie um arquivo:&lt;/label&gt;
+&lt;input 
+  type="file" 
+  id="arquivo" 
+  name="arquivo" 
+/&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <label for="arquivo">Envie um arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo" />
+          </form>
+        </div>
+      </section>
+
+      <!-- Botão de Enviar -->
+      <section>
+        <h2>Botão de Enviar</h2>
+        <div class="explanation">
+          O botão finaliza o formulário e envia os dados.
+        </div>
+        <pre class="code-block">
+<code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code>
+        </pre>
+        <div class="result">
+          <form>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formulário Completo</h2>
+        <div class="explanation">
+          Aqui está a versão completa do formulário com todos os campos
+          abordados nas sessões anteriores.
+        </div>
+        <div class="result">
+          <form action="#" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome completo"
+              required
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@dominio.com"
+              required
+            />
+
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Crie uma senha segura"
+              required
+            />
+
+            <label for="pais">Selecione seu país:</label>
+            <select id="pais" name="pais" required>
+              <option value="">Selecione</option>
+              <option value="brasil">Brasil</option>
+              <option value="portugal">Portugal</option>
+              <option value="eua">Estados Unidos</option>
+              <option value="canada">Canadá</option>
+              <option value="japao">Japão</option>
+              <option value="alemanha">Alemanha</option>
+              <option value="franca">França</option>
+              <option value="india">Índia</option>
+              <option value="china">China</option>
+              <option value="australia">Austrália</option>
+            </select>
+
+            <fieldset>
+              <legend>O que gosta mais?</legend>
+              <div class="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="preferencia"
+                    value="mais-de-estudar"
+                    checked
+                  />
+                  Mais de estudar
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="preferencia"
+                    value="mais-de-batata"
+                  />
+                  Mais de batata
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="preferencia"
+                    value="mais-de-estudar-e-batata"
+                  />
+                  Mais de estudar e mais de batata
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Interesses:</legend>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="interesses" value="tecnologia" />
+                  Tecnologia
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="ciencia" />
+                  Ciência
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="arte" />
+                  Arte
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="musica" />
+                  Música
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="esportes" />
+                  Esportes
+                </label>
+                <label>
+                  <input type="checkbox" name="interesses" value="literatura" />
+                  Literatura
+                </label>
+              </div>
+            </fieldset>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              placeholder="Escreva sua mensagem aqui..."
+            ></textarea>
+
+            <label for="arquivo">Envie um arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo" />
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

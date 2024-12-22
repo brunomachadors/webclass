@@ -28,7 +28,16 @@
           <code>&lt;h6&gt;</code>. Quanto menor o número, maior o tamanho do
           título.
         </div>
-        <div>
+        <pre class="code-block">
+<code>&lt;h1&gt;H1: Mundial do Grêmio de 1983&lt;/h1&gt;
+&lt;h2&gt;H2: Mundial do São Paulo de 1993&lt;/h2&gt;
+&lt;h3&gt;H3: A Libertadores do Flamengo em 2019&lt;/h3&gt;
+&lt;h4&gt;H4: O Brasileirão do Palmeiras de 2018&lt;/h4&gt;
+&lt;h5&gt;H5: A Copa do Brasil do Cruzeiro em 2000&lt;/h5&gt;
+&lt;h6&gt;H6: O Mundial do Corinthians de 2000&lt;/h6&gt;
+</code>
+      </pre>
+        <div class="result">
           <h1>H1: Mundial do Grêmio de 1983</h1>
           <h2>H2: Mundial do São Paulo de 1993</h2>
           <h3>H3: A Libertadores do Flamengo em 2019</h3>
@@ -44,120 +53,63 @@
           Parágrafos são usados para textos mais longos e são criados com a tag
           <code>&lt;p&gt;</code>.
         </div>
-        <p>
-          Exemplo de parágrafo: "HTML é a linguagem padrão para criação de
-          páginas web."
-        </p>
-      </section>
-
-      <section>
-        <h2>Links</h2>
-        <div class="explanation">
-          Links são criados com a tag <code>&lt;a&gt;</code> e podem apontar
-          para outros sites ou páginas.
-        </div>
-        <a href="https://www.google.com" target="_blank"
-          >Este é um link para o Google</a
-        >
-      </section>
-
-      <section>
-        <h2>Imagens</h2>
-        <div class="explanation">
-          Para adicionar imagens, usamos a tag <code>&lt;img&gt;</code>. O
-          atributo <code>src</code> define o caminho da imagem, e o
-          <code>alt</code> descreve a imagem.
-        </div>
-        <img
-          src="https://via.placeholder.com/200"
-          alt="Exemplo de imagem"
-          style="border: 1px solid #000"
-        />
-      </section>
-
-      <section>
-        <h2>Listas</h2>
-        <div class="explanation">
-          Existem dois tipos principais de listas: ordenadas
-          (<code>&lt;ol&gt;</code>) e não ordenadas (<code>&lt;ul&gt;</code>).
-        </div>
-        <div>
-          <h3>Lista Ordenada</h3>
-          <ol>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ol>
-          <h3>Lista Não Ordenada</h3>
-          <ul>
-            <li>Item A</li>
-            <li>Item B</li>
-            <li>Item C</li>
-          </ul>
+        <pre class="code-block">
+<code>&lt;p&gt;"Programar é como cozinhar: você começa com a receita, mas termina improvisando."&lt;/p&gt;
+&lt;p&gt;"Front-end é como mágica: você impressiona os outros, mas sabe que é tudo gambiarra."&lt;/p&gt;
+&lt;p&gt;"Debugging: o processo de remover o bug do código e, em seguida, adicionar mais dois no lugar."&lt;/p&gt;
+&lt;p&gt;"HTML sem CSS é como um bolo sem cobertura: funcional, mas sem graça."&lt;/p&gt;
+</code>
+      </pre>
+        <div class="result">
+          <p>
+            "Programar é como cozinhar: você começa com a receita, mas termina
+            improvisando."
+          </p>
+          <p>
+            "Front-end é como mágica: você impressiona os outros, mas sabe que é
+            tudo gambiarra."
+          </p>
+          <p>
+            "Debugging: o processo de remover o bug do código e, em seguida,
+            adicionar mais dois no lugar."
+          </p>
+          <p>
+            "HTML sem CSS é como um bolo sem cobertura: funcional, mas sem
+            graça."
+          </p>
         </div>
       </section>
 
       <section>
-        <h2>Formulários</h2>
+        <h2>Textos com Estilo</h2>
         <div class="explanation">
-          Formulários permitem a coleta de dados do usuário e são criados com a
-          tag <code>&lt;form&gt;</code>. Aqui estão alguns exemplos de campos
-          comuns:
+          Você pode estilizar o texto com tags específicas, como negrito,
+          itálico e sublinhado.
         </div>
-        <form action="#" method="POST">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" />
-          <br />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" />
-          <br />
-          <label for="senha">Senha:</label>
-          <input type="password" id="senha" name="senha" />
-          <br />
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem"></textarea>
-          <br />
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-
-      <section>
-        <h2>Divisores</h2>
-        <div class="explanation">
-          A tag <code>&lt;hr&gt;</code> é usada para criar divisores
-          horizontais.
+        <pre class="code-block">
+<code>&lt;p&gt;&lt;strong&gt;Negrito:&lt;/strong&gt; Este texto está usando a tag &lt;strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Itálico:&lt;/em&gt; Este texto está usando a tag &lt;em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Sublinhado:&lt;/u&gt; Este texto está usando a tag &lt;u&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;Riscado:&lt;/s&gt; Este texto está usando a tag &lt;s&gt;.&lt;/p&gt;
+</code>
+      </pre>
+        <div class="result">
+          <p>
+            <strong>Negrito:</strong> Este texto está usando a tag
+            <code>&lt;strong&gt;</code>.
+          </p>
+          <p>
+            <em>Itálico:</em> Este texto está usando a tag
+            <code>&lt;em&gt;</code>.
+          </p>
+          <p>
+            <u>Sublinhado:</u> Este texto está usando a tag
+            <code>&lt;u&gt;</code>.
+          </p>
+          <p>
+            <s>Riscado:</s> Este texto está usando a tag <code>&lt;s&gt;</code>.
+          </p>
         </div>
-        <hr />
-      </section>
-
-      <section>
-        <h2>Tabelas</h2>
-        <div class="explanation">
-          Tabelas são criadas com as tags <code>&lt;table&gt;</code>,
-          <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> e
-          <code>&lt;td&gt;</code>.
-        </div>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Profissão</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>João</td>
-              <td>30</td>
-              <td>Engenheiro</td>
-            </tr>
-            <tr>
-              <td>Maria</td>
-              <td>25</td>
-              <td>Designer</td>
-            </tr>
-          </tbody>
-        </table>
       </section>
     </main>
     <footer class="footer">
@@ -168,5 +120,17 @@
         >
       </p>
     </footer>
+    <script>
+      document.querySelectorAll('pre.code-block').forEach((block) => {
+        const lines = block.textContent.trim().split('\n');
+        const minIndent = Math.min(
+          ...lines
+            .filter((line) => line.trim() !== '')
+            .map((line) => line.match(/^(\s*)/)[0].length)
+        );
+        const formatted = lines.map((line) => line.slice(minIndent)).join('\n');
+        block.textContent = formatted;
+      });
+    </script>
   </body>
 </html>
