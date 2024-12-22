@@ -1,0 +1,156 @@
+/* Estilos globais */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+section {
+  margin: 40px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #45474b;
+}
+
+/* Exemplo: Alterar cores */
+#styled-paragraph {
+  background-color: #fad72c; /* Cor de fundo inicial */
+  color: #45474b; /* Cor do texto inicial */
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* Exercício: Alterar cores */
+#exercise-paragraph {
+  background-color: #f0f0f0; /* Cor inicial neutra */
+  color: #000; /* Texto padrão */
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Exemplo: Alterar fontes */
+#styled-font {
+  font-size: 1.5rem; /* Tamanho grande */
+  font-family: 'Arial', sans-serif; /* Família da fonte */
+  font-weight: bold; /* Negrito */
+  color: #333;
+  padding: 10px;
+}
+
+/* Exercício: Alterar fontes */
+#exercise-font {
+  font-size: 1rem; /* Tamanho padrão */
+  font-family: 'Times New Roman', serif; /* Fonte padrão */
+  font-weight: normal; /* Peso padrão */
+  color: #333;
+  padding: 10px;
+}
+
+/* Exemplo: Bordas e Sombras */
+#styled-border {
+  border: 2px solid #45474b; /* Borda sólida */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #fad72c;
+  color: #45474b;
+  width: 80%;
+}
+
+/* Exercício: Bordas e Sombras */
+#exercise-border {
+  border: 1px solid #ddd; /* Borda inicial */
+  border-radius: 0; /* Sem arredondamento */
+  box-shadow: none; /* Sem sombra */
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #f0f0f0;
+  color: #000;
+  width: 80%;
+}
+
+/* Exemplo: Espaçamentos e Alinhamentos */
+#styled-spacing {
+  padding: 20px; /* Espaçamento interno */
+  margin: 30px auto; /* Espaçamento externo */
+  text-align: center; /* Alinhamento do texto */
+  background-color: #fad72c;
+  color: #45474b;
+  border-radius: 8px;
+  width: 80%;
+}
+
+/* Exercício: Espaçamentos e Alinhamentos */
+#exercise-spacing {
+  padding: 10px; /* Espaçamento interno inicial */
+  margin: 20px auto; /* Espaçamento externo inicial */
+  text-align: left; /* Alinhamento padrão */
+  background-color: #f0f0f0;
+  color: #000;
+  width: 80%;
+}
+
+/* Exemplo: Hover */
+#styled-hover {
+  background-color: #fad72c; /* Cor inicial */
+  color: #45474b; /* Cor do texto inicial */
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+  transition: all 0.3s ease; /* Suaviza a transição */
+}
+
+#styled-hover:hover {
+  background-color: #45474b; /* Cor de fundo ao passar o mouse */
+  color: #fad72c; /* Cor do texto ao passar o mouse */
+  transform: scale(1.05); /* Efeito de leve aumento */
+}
+
+/* Exercício: Hover */
+#exercise-hover {
+  background-color: #f0f0f0; /* Cor inicial */
+  color: #000; /* Texto padrão */
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Suaviza a transição */
+}
+
+#exercise-hover:hover {
+  /* Aqui os alunos deverão personalizar o efeito */
+}
