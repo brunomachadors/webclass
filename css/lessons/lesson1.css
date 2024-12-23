@@ -52,6 +52,43 @@ ol li {
   padding: 5px 10px; /* Espaço interno */
 }
 
+/* Estilo para inputs e botões */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço entre o input e o botão */
+  margin-top: 15px;
+}
+
+.input-group input {
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1; /* Faz com que o input cresça proporcionalmente */
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group button {
+  height: 40px;
+  padding: 0 15px;
+  background-color: #fad72c;
+  color: #45474b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group button:hover {
+  background-color: #f4c430; /* Cor levemente mais clara no hover */
+}
+
 .list-container {
   display: flex;
   align-items: center;
@@ -121,6 +158,11 @@ pre.code-block {
 code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
-  display: block;
   line-height: 1.5;
+  background-color: #f4f4f4; /* Fundo claro para destacar */
+  color: #333; /* Texto escuro para contraste */
+  padding: 0 8px; /* Espaço interno */
+  border-radius: 4px; /* Bordas arredondadas */
+  border: 1px solid #ddd; /* Borda sutil */
+  display: inline-block; /* Garante que ocupe apenas o espaço necessário */
 }
