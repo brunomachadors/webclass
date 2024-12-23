@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 5: JavaScript para Interatividade</title>
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/buttons.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson1.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson5.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Introdução</a>
+      </h1>
+    </nav>
+    <main>
+      <h1>Aula 5: JavaScript para Interatividade</h1>
+      <p>
+        Nesta aula, vamos explorar como usar JavaScript para tornar nossas
+        páginas interativas!
+      </p>
+
+      <section>
+        <h2>O que é JavaScript?</h2>
+        <p>
+          JavaScript é uma linguagem de programação que adiciona interatividade
+          a páginas web. Com ele, é possível responder a eventos do usuário,
+          manipular elementos da página e até mesmo criar funcionalidades
+          dinâmicas.
+        </p>
+      </section>
+
+      <section>
+        <h2>Exemplo: Alterando Texto</h2>
+        <div class="example">
+          <p id="demo">Texto original.</p>
+          <button onclick="changeText()" class="button">
+            Clique para mudar o texto
+          </button>
+        </div>
+        <p>
+          <strong>Explicação:</strong> Este exemplo demonstra como alterar o
+          texto de um elemento HTML com JavaScript. Utilizamos o método
+          <code>document.getElementById</code> para selecionar o parágrafo pelo
+          ID e a propriedade <code>textContent</code> para modificar o texto.
+        </p>
+        <p>
+          <strong>Dica:</strong> Lembre-se de que os IDs devem ser únicos na
+          página!
+        </p>
+      </section>
+
+      <section>
+        <h2>Exercício 1: Alterar Cor de Fundo</h2>
+        <p>
+          Este botão altera a cor de fundo da página alternando entre duas cores
+          pré-definidas.
+        </p>
+        <div>
+          <button onclick="changeBackgroundColor()" class="button">
+            Alterar cor de fundo
+          </button>
+        </div>
+        <p>
+          <strong>Explicação:</strong> A função utiliza a propriedade
+          <code>style.backgroundColor</code> para mudar a cor do corpo da
+          página. Comparamos a cor atual para decidir qual será aplicada.
+        </p>
+        <p>
+          <strong>Dica:</strong> Teste diferentes combinações de cores para
+          personalizar!
+        </p>
+      </section>
+
+      <section>
+        <h2>Exercício 2: Adicionar Itens à Lista</h2>
+        <p>
+          Este exercício demonstra como capturar o valor de um campo de entrada
+          e adicionar itens a uma lista abaixo.
+        </p>
+        <div class="input-group">
+          <input type="text" id="itemInput" placeholder="Digite um item" />
+          <button onclick="addItem()" class="button">Adicionar Item</button>
+        </div>
+        <div class="list-container">
+          <ul id="itemList"></ul>
+        </div>
+        <p>
+          <strong>Explicação:</strong> Capturamos o valor do campo de texto com
+          <code>document.getElementById</code>, criamos um novo elemento
+          <code>&lt;li&gt;</code> e o adicionamos à lista com
+          <code>appendChild</code>.
+        </p>
+        <p>
+          <strong>Dica:</strong> Verifique se o campo não está vazio antes de
+          adicionar o item.
+        </p>
+      </section>
+
+      <section>
+        <h2>Exercício 3: Temporizador com Contagem Regressiva</h2>
+        <p>
+          Um botão inicia uma contagem regressiva de 10 segundos. O tempo
+          restante é exibido na página.
+        </p>
+        <div class="example">
+          <p id="timerDisplay"></p>
+          <button onclick="startTimer()" class="button">
+            Iniciar Contagem
+          </button>
+        </div>
+        <p>
+          <strong>Explicação:</strong> Usamos <code>setInterval</code> para
+          reduzir o valor do temporizador a cada segundo e
+          <code>clearInterval</code> para parar quando chega a 0.
+        </p>
+        <p>
+          <strong>Dica:</strong> Combine com estilos visuais, como alterar a cor
+          do texto para vermelho quando o tempo acabar!
+        </p>
+      </section>
+
+      <section>
+        <h2>Exercício 4: Alternar Visibilidade</h2>
+        <p>Clique no botão para mostrar ou esconder o parágrafo abaixo.</p>
+        <div class="example">
+          <p id="toggleParagraph">Este texto pode ser escondido.</p>
+          <button onclick="toggleVisibility()" class="button">
+            Alternar Visibilidade
+          </button>
+        </div>
+        <p>
+          <strong>Explicação:</strong> Alteramos a propriedade
+          <code>display</code> do elemento entre <code>none</code> e
+          <code>block</code> para esconder ou mostrar o texto.
+        </p>
+        <p>
+          <strong>Dica:</strong> Você pode usar transições de CSS para criar um
+          efeito suave ao esconder ou mostrar o elemento.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+    <script src="./lesson5.js"></script>
+  </body>
+</html>
