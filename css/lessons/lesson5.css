@@ -1,0 +1,22 @@
+#timerDisplay {
+  font-size: 4rem; /* Texto grande */
+  font-weight: bold; /* Negrito */
+  color: #ffffff; /* Texto branco */
+  text-align: center; /* Centraliza o texto */
+  margin: 20px auto; /* Espaço ao redor */
+  background-color: #333333; /* Fundo escuro para contraste */
+  padding: 20px; /* Espaço interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  width: 120px; /* Largura fixa */
+  height: 80px; /* Altura fixa */
+  display: flex; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  letter-spacing: 5px; /* Espaçamento entre números para efeito digital */
+}
+
+#timerDisplay span {
+  opacity: 1; /* Inicialmente visível */
+  transition: opacity 0.5s ease-in-out; /* Transição suave */
+}
