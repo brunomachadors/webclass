@@ -12,49 +12,51 @@ h2 {
 }
 
 .lesson-list {
-  list-style: none;
   padding: 0;
-  margin: 20px 0;
 }
 
 .lesson-list li {
+  list-style: none;
   margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fad72c;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.lesson-list li:hover {
-  transform: scale(1.05);
-  background-color: #45474b;
 }
 
 .lesson-list li a {
-  text-decoration: none;
-  color: #45474b;
-  font-weight: bold;
+  display: block; /* O link ocupa todo o espaço do botão */
+  padding: 15px; /* Espaçamento interno mais equilibrado */
+  background-color: #45474b;
+  color: #ffffff; /* Texto claro */
+  text-decoration: none; /* Remove sublinhado */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  text-align: center; /* Centraliza o texto */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
 }
 
-.lesson-list li:hover a {
-  color: #fad72c;
+.lesson-list li a:hover {
+  background-color: #fad72c; /* Fundo amarelo ao passar o mouse */
+  color: #45474b; /* Texto escuro para contraste */
+  transform: translateY(-3px); /* Eleva levemente o botão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Realça a sombra */
 }
 
 .about-link {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #45474b;
-  color: #fad72c;
+  background-color: #45474b; /* Fundo escuro */
+  color: #fad72c; /* Texto amarelo */
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 .about-link:hover {
-  background-color: #fad72c;
-  color: #45474b;
+  background-color: #fad72c; /* Fundo amarelo ao passar o mouse */
+  color: #45474b; /* Texto escuro */
+  transform: translateY(-3px); /* Eleva levemente o botão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Realça a sombra */
 }
