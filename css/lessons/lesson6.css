@@ -14,7 +14,7 @@
 }
 
 .card {
-  background-color: #333333; /* Fundo escuro */
+  background-color: #45474b; /* Fundo escuro */
   color: #ffffff; /* Texto claro */
   border-radius: 10px; /* Bordas arredondadas */
   padding: 15px; /* Espaçamento interno */
@@ -96,7 +96,7 @@
 }
 
 .explanation-box {
-  background-color: #333333; /* Fundo cinza escuro */
+  background-color: #45474b; /* Fundo cinza escuro */
   border-left: 4px solid #fad72c; /* Borda destacada */
   padding: 15px;
   margin: 20px 0;

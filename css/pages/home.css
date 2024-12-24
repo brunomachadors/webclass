@@ -2,7 +2,7 @@ main {
   flex: 1;
   margin: 20px auto;
   width: 90%;
-  max-width: 800px;
+  max-width: 500px;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h2 {
   display: block; /* O link ocupa todo o espaço do botão */
   padding: 15px; /* Espaçamento interno mais equilibrado */
   background-color: #45474b;
-  color: #ffffff; /* Texto claro */
+  color: #fad72c; /* Texto claro */
   text-decoration: none; /* Remove sublinhado */
   border-radius: 5px; /* Bordas arredondadas */
   font-weight: bold; /* Texto em negrito */
@@ -36,7 +36,7 @@ h2 {
 .lesson-list li a:hover {
   background-color: #fad72c; /* Fundo amarelo ao passar o mouse */
   color: #45474b; /* Texto escuro para contraste */
-  transform: translateY(-3px); /* Eleva levemente o botão */
+  transform: scale(1.1); /* Eleva levemente o botão */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Realça a sombra */
 }
 
