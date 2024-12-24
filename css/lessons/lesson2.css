@@ -132,3 +132,31 @@ input[type='checkbox']:focus {
   outline: 2px solid #f9f9f9;
   outline-offset: 3px;
 }
+
+/* Estilo para blocos de código */
+pre.code-block {
+  color: #f9f9f9; /* Texto claro */
+  padding: 15px;
+  border-radius: 10px; /* Bordas arredondadas */
+  background-color: transparent;
+
+  margin: 20px 0;
+  overflow-x: auto; /* Adiciona rolagem horizontal para textos grandes */
+
+  font-size: 0.95rem; /* Tamanho ajustado para legibilidade */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Estilo para tags <code> dentro de <pre> */
+pre.code-block code {
+  color: #fad72c; /* Texto destacado em amarelo */
+}
+
+/* Estilo para textos <code> fora de blocos */
+code {
+  background-color: #2d2d2d; /* Fundo escuro */
+  color: #fad72c; /* Cor do texto */
+  padding: 2px 5px; /* Espaçamento interno */
+  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+  font-size: 0.95rem; /* Tamanho ajustado */
+}

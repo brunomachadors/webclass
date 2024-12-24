@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 6: Introdução ao JavaScript para Web</title>
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/buttons.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson1.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson6.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Introdução</a>
+      </h1>
+    </nav>
+    <main>
+      <h1>Aula 6: Introdução ao JavaScript para Web</h1>
+      <p>
+        Nesta aula, exploraremos como usar JavaScript para manipular o DOM,
+        adicionar eventos e interagir diretamente com elementos de uma página
+        web.
+      </p>
+
+      <section>
+        <h2>Requisições Simples com Fetch</h2>
+        <div class="explanation-box">
+          <p>
+            Este exercício busca informações de Pokémon usando a API PokéAPI e
+            exibe os dados em cards.
+          </p>
+          <p>
+            Você aprenderá como fazer requisições HTTP com <code>fetch</code>,
+            lidar com respostas JSON e exibir os dados dinamicamente na página.
+          </p>
+        </div>
+        <p>Clique no botão para buscar informações de Pokémon:</p>
+        <button onclick="fetchPokemon()" class="button">Buscar Pokémons</button>
+        <div id="pokemonCards" class="example card-container"></div>
+      </section>
+
+      <section>
+        <h2>Lista de Tarefas</h2>
+        <div class="explanation-box">
+          Neste exercício, você aprenderá a criar uma lista de tarefas
+          interativa usando JavaScript. As tarefas podem ser adicionadas,
+          marcadas como completas e movidas para uma lista separada.
+        </div>
+        <p>Gerencie suas tarefas diárias com a lista interativa abaixo:</p>
+        <div class="todo-container">
+          <form id="taskForm" class="input-group">
+            <input type="text" id="taskInput" placeholder="Digite uma tarefa" />
+            <button type="submit" class="button">Adicionar Tarefa</button>
+          </form>
+          <h3>Tarefas Pendentes</h3>
+          <ul id="taskList"></ul>
+          <h3>Tarefas Completadas</h3>
+          <ul id="completedTasksList"></ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+    <script src="./lesson6.js"></script>
+  </body>
+</html>

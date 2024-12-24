@@ -20,3 +20,54 @@ body {
 main {
   flex: 1;
 }
+
+/* Blocos de código */
+pre.code-block {
+  background-color: #333333; /* Fundo escuro */
+  color: #fad72c; /* Texto amarelo */
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 20px auto;
+  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+  font-size: 0.95rem; /* Tamanho ajustado */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+  max-width: 90%; /* Limita a largura */
+}
+
+code {
+  background-color: transparent; /* Sem fundo adicional */
+  color: inherit; /* Herda a cor do bloco */
+  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+}
+
+/* Explicações */
+.explanation {
+  background-color: #45474b; /* Fundo cinza escuro */
+  color: #f9f9f9; /* Texto claro */
+  padding: 15px;
+  border-left: 5px solid #fad72c; /* Barra lateral amarela */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve */
+  font-size: 1rem;
+  max-width: 90%; /* Limita a largura */
+  margin: 20px auto; /* Centraliza a explicação */
+}
+
+/* Estilo do formulário */
+form {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #45474b;
+  color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
