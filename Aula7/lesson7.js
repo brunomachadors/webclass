@@ -50,3 +50,12 @@ document.addEventListener('keydown', (e) => {
   }
   quadrado.style.transform = `translate(${posX}px, ${posY}px)`;
 });
+
+const updateDimensions = () => {
+  const rect = movimentoArea.getBoundingClientRect();
+  areaWidth = rect.width;
+  areaHeight = rect.height;
+};
+
+window.addEventListener('resize', updateDimensions);
+updateDimensions();
