@@ -1,0 +1,124 @@
+/* Geral */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #45474b;
+  text-align: center;
+}
+
+/* Container Principal */
+main {
+  flex: 1;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Explicação */
+.explanation {
+  background-color: #45474b;
+  color: #f9f9f9;
+  border-left: 4px solid #fad72c;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Resultados */
+.result {
+  margin: 20px 0;
+}
+
+/* Hover Box */
+.hover-box {
+  width: 200px;
+  height: 100px;
+  margin: 20px auto;
+  background-color: #45474b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Movimento */
+#movimentoArea {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #45474b;
+  position: relative;
+  margin: 20px auto;
+}
+
+.quadrado {
+  width: 50px;
+  height: 50px;
+  background-color: #fad72c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.1s ease;
+}
+
+/* Estilo para inputs e botões */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço entre o input e o botão */
+  margin-top: 15px;
+}
+
+.input-group input {
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1; /* Faz com que o input cresça proporcionalmente */
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group button {
+  height: 40px;
+  padding: 0 15px;
+  background-color: #fad72c;
+  color: #45474b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group button:hover {
+  background-color: #f4c430; /* Cor levemente mais clara no hover */
+}
+
+.teclado-input {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  color: #333333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teclado-input:focus {
+  border-color: #fad72c;
+  box-shadow: 0 0 8px rgba(250, 215, 44, 0.7);
+  outline: none;
+}
