@@ -10,6 +10,7 @@ const telefoneErro = document.getElementById('telefoneErro');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  console.log('Formulário submetido'); // Log inicial
 
   // Obter valores dos campos
   const nome = form.nome.value.trim();
@@ -19,74 +20,75 @@ form.addEventListener('submit', (e) => {
   const telefone = form.telefone.value.trim();
   const pais = form.pais.value;
 
-  // Resetar mensagens de erro e estilos
-  [
-    form.nome,
-    form.email,
-    form.senha,
-    form.dataNascimento,
-    form.pais,
-    form.telefone,
-  ].forEach((campo) => {
-    campo.classList.remove('error-field');
+  console.log('Valores dos campos:', {
+    nome,
+    email,
+    senha,
+    dataNascimento,
+    telefone,
+    pais,
   });
-  nomeErro.textContent = '';
-  emailErro.textContent = '';
-  senhaErro.textContent = '';
-  dataNascimentoErro.textContent = '';
-  paisErro.textContent = '';
-  telefoneErro.textContent = '';
-  mensagem.textContent = '';
 
-  // Validação
+  // Resetar mensagens de erro e estilos
+  resetarErros();
+
   let erros = 0;
 
+  // Validações
   if (!nome || nome.length < 3) {
-    nomeErro.textContent = 'O nome deve ter pelo menos 3 caracteres.';
-    form.nome.classList.add('error-field');
+    console.log('Erro no nome');
+    exibirErro(form.nome, nomeErro, 'O nome deve ter pelo menos 3 caracteres.');
     erros++;
   }
 
   if (!email || !validarEmail(email)) {
-    emailErro.textContent = 'Digite um email válido.';
-    form.email.classList.add('error-field');
+    console.log('Erro no email');
+    exibirErro(form.email, emailErro, 'Digite um email válido.');
     erros++;
   }
 
   if (!senha || senha.length < 6) {
-    senhaErro.textContent = 'A senha deve ter pelo menos 6 caracteres.';
-    form.senha.classList.add('error-field');
+    console.log('Erro na senha');
+    exibirErro(
+      form.senha,
+      senhaErro,
+      'A senha deve ter pelo menos 6 caracteres.'
+    );
     erros++;
   }
 
-  if (!dataNascimento) {
-    dataNascimentoErro.textContent = 'Preencha a data de nascimento.';
-    form.dataNascimento.classList.add('error-field');
-    erros++;
-  } else if (!validarDataNascimento(dataNascimento)) {
-    dataNascimentoErro.textContent = 'Você deve ter pelo menos 18 anos.';
-    form.dataNascimento.classList.add('error-field');
+  if (!dataNascimento || !validarDataNascimento(dataNascimento)) {
+    console.log('Erro na data de nascimento');
+    exibirErro(
+      form.dataNascimento,
+      dataNascimentoErro,
+      'Você deve ter pelo menos 18 anos.'
+    );
     erros++;
   }
 
-  if (!pais || pais === '') {
-    paisErro.textContent = 'Selecione um país.';
-    form.pais.classList.add('error-field');
+  if (!pais) {
+    console.log('Erro no país');
+    exibirErro(form.pais, paisErro, 'Selecione um país.');
     erros++;
   }
 
   if (!telefone || !validarTelefone(telefone)) {
-    telefoneErro.textContent = 'Telefone inválido.';
-    form.telefone.classList.add('error-field');
+    console.log('Erro no telefone');
+    exibirErro(form.telefone, telefoneErro, 'Telefone inválido.');
     erros++;
   }
 
+  // Exibir mensagem final
   if (erros === 0) {
+    console.log('Formulário válido, exibindo mensagem de sucesso');
     mensagem.textContent = 'Formulário enviado com sucesso!';
     mensagem.style.color = 'green';
+
     form.reset();
   } else {
-    mensagem.style.color = 'red';
+    console.log(`Formulário inválido com ${erros} erros`);
+    mensagem.textContent = ''; // Garante que nenhuma mensagem de sucesso apareça com erros
   }
 });
 
@@ -151,4 +153,37 @@ function validarEmail(email) {
 
   // Retorna true se o e-mail passar na validação, caso contrário false
   return regexEmail.test(email);
+}
+
+function resetarErros() {
+  // Lista de campos do formulário para limpar erros
+  const campos = [
+    form.nome,
+    form.email,
+    form.senha,
+    form.dataNascimento,
+    form.pais,
+    form.telefone,
+  ];
+
+  // Remove a classe de erro de cada campo
+  campos.forEach((campo) => {
+    campo.classList.remove('error-field');
+  });
+
+  // Limpa as mensagens de erro
+  nomeErro.textContent = '';
+  emailErro.textContent = '';
+  senhaErro.textContent = '';
+  dataNascimentoErro.textContent = '';
+  paisErro.textContent = '';
+  telefoneErro.textContent = '';
+}
+
+function validarTelefone(telefone) {
+  // Expressão regular para validar telefone (mínimo 8, máximo 15 dígitos)
+  const regexTelefone = /^[0-9]{8,15}$/;
+
+  // Retorna true se o telefone passar na validação, caso contrário false
+  return regexTelefone.test(telefone);
 }
