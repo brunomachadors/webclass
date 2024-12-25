@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 7: Trabalhando com Eventos</title>
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/buttons.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson7.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Introdução</a>
+      </h1>
+    </nav>
+    <main>
+      <h1>Aula 7: Trabalhando com Eventos</h1>
+      <p>
+        Nesta aula, exploraremos como eventos no JavaScript tornam a página
+        interativa!
+      </p>
+
+      <!-- Evento de Clique -->
+      <section>
+        <h2>Evento de Clique</h2>
+        <div class="explanation">
+          Clique no botão para ver a mensagem ser exibida.
+        </div>
+        <div class="result">
+          <button
+            id="botaoClique"
+            class="button"
+            aria-label="Clique para exibir mensagem"
+          >
+            Clique Aqui
+          </button>
+
+          <p id="mensagemClique"></p>
+        </div>
+      </section>
+
+      <!-- Efeitos com Mouse -->
+      <section>
+        <h2>Efeitos com Mouse</h2>
+        <div class="explanation">
+          Passe o mouse sobre o quadrado para mudar sua cor.
+        </div>
+        <div class="result">
+          <div id="hoverBox" class="hover-box">Passe o mouse aqui</div>
+        </div>
+      </section>
+
+      <!-- Evento de Teclado -->
+      <section>
+        <h2>Evento de Teclado</h2>
+        <div class="explanation">
+          Digite no campo abaixo para capturar a tecla pressionada.
+        </div>
+        <div class="result">
+          <div class="input-group">
+            <input
+              type="text"
+              id="tecladoInput"
+              class="teclado-input"
+              placeholder="Digite algo..."
+            />
+          </div>
+          <p id="mensagemTeclado"></p>
+        </div>
+      </section>
+
+      <!-- Controle de Movimento -->
+      <section>
+        <h2>Controle de Movimento</h2>
+        <div class="explanation">
+          Use as setas do teclado para mover o quadrado na tela.
+        </div>
+        <div class="result">
+          <div id="movimentoArea">
+            <div
+              id="quadradoMovel"
+              class="quadrado"
+              aria-label="Quadrado movível"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <button onclick="window.location.href='../index.html'" class="button">
+        Voltar
+      </button>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+    <script src="./lesson7.js"></script>
+  </body>
+</html>
