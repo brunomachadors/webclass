@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 9: Consumindo APIs</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/buttons.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson9.css" />
+    <link rel="stylesheet" href="../css/components/modal.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Consumindo APIs</a>
+      </h1>
+    </nav>
+    <main>
+      <section>
+        <h2>Consumindo APIs com JavaScript</h2>
+        <p>
+          Nesta aula, vamos aprender como consumir uma API REST utilizando
+          JavaScript.
+        </p>
+
+        <h3>Posts</h3>
+        <button id="loadPosts" class="button primary">Carregar Posts</button>
+
+        <h3>Adicionar Novo Post</h3>
+        <form id="addPostForm">
+          <input
+            type="text"
+            id="postTitle"
+            placeholder="Título do post"
+            required
+          />
+          <textarea
+            id="postBody"
+            placeholder="Conteúdo do post"
+            required
+          ></textarea>
+          <button type="submit" class="button secondary">Adicionar Post</button>
+        </form>
+        <ul id="postsList" class="posts-list"></ul>
+      </section>
+
+      <div id="deleteModal" class="modal">
+        <div class="modal-content">
+          <p>Você tem certeza que deseja apagar este post?</p>
+          <div class="modal-buttons">
+            <button id="confirmDelete" class="button delete">Sim</button>
+            <button id="cancelDelete" class="button secondary">Não</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+    <script src="./lesson9.js"></script>
+  </body>
+</html>

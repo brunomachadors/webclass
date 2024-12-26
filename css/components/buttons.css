@@ -54,3 +54,23 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+
+/* Botão de apagar */
+.button.delete {
+  background-color: #e74c3c; /* Vermelho */
+  color: #fff; /* Texto branco */
+}
+
+.button.delete:hover {
+  background-color: #c0392b; /* Vermelho mais escuro ao passar o mouse */
+  transform: scale(1.05); /* Adiciona um pequeno efeito de escala */
+}
+
+.button.edit {
+  background-color: #3498db; /* Azul claro */
+  color: #fff;
+}
+
+.button.edit:hover {
+  background-color: #2980b9; /* Azul mais escuro */
+}

@@ -20,3 +20,14 @@
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaçamento entre os botões */
+  margin-top: 20px;
+}
+
+.modal-buttons .button {
+  padding: 10px 20px;
+}
