@@ -1,0 +1,12 @@
+[
+  { "code": "+61", "name": "AU" },
+  { "code": "+55", "name": "BR" },
+  { "code": "+49", "name": "DE" },
+  { "code": "+34", "name": "ES" },
+  { "code": "+33", "name": "FR" },
+  { "code": "+91", "name": "IN" },
+  { "code": "+81", "name": "JP" },
+  { "code": "+351", "name": "PT" },
+  { "code": "+44", "name": "UK" },
+  { "code": "+1", "name": "US" }
+]
