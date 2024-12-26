@@ -12,6 +12,8 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  max-width: 200px; /* Define uma largura máxima */
+  width: 100%; /* O botão ocupará todo o espaço disponível até o limite do max-width */
 }
 
 /* Hover para botão padrão */
@@ -40,8 +42,9 @@
 }
 
 .button.secondary:hover {
-  background-color: #333;
+  background-color: #45474b;
   color: #fad72c;
+  border: 1px solid #fad72c;
 }
 
 /* Botão desativado */

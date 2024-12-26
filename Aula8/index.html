@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 8: Formulários e Validação</title>
+    <link rel="stylesheet" href="../css/components/header.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/components/buttons.css" />
+    <link rel="stylesheet" href="../css/components/modal.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson1.css" />
+    <link rel="stylesheet" href="../css/lessons/lesson8.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html" class="nav-link">Curso Web: Introdução</a>
+      </h1>
+    </nav>
+    <main>
+      <h1>Aula 8: Formulários e Validação</h1>
+      <p>
+        Aprenda a validar entradas de formulários e melhorar a experiência do
+        usuário!
+      </p>
+
+      <h2>Formulário de Cadastro</h2>
+
+      <section>
+        <form id="formCadastro">
+          <div class="form-row">
+            <label for="nome">Nome Completo*</label>
+            <div class="input-container">
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+              />
+              <p class="error-message" id="nomeErro"></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email*</label>
+            <div class="input-container">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="exemplo@dominio.com"
+              />
+              <p class="error-message" id="emailErro"></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="senha">Senha*</label>
+            <div class="input-container">
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Crie uma senha segura"
+              />
+              <p class="error-message" id="senhaErro"></p>
+            </div>
+          </div>
+
+          <hr style="border: 1px solid #ccc; margin: 20px 0; width: 100%" />
+
+          <div class="form-row">
+            <label for="dataNascimento">Data de Nascimento*</label>
+            <div class="input-container">
+              <input type="date" id="dataNascimento" name="dataNascimento" />
+              <p class="error-message" id="dataNascimentoErro"></p>
+            </div>
+          </div>
+
+          <div class="phoneContainer">
+            <div class="form-row">
+              <label for="pais">Código do país*</label>
+              <div class="input-container">
+                <select id="pais" name="pais">
+                  <option value="" selected disabled>Selecione</option>
+                </select>
+                <p class="error-message" id="paisErro"></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="telefone">Telefone*</label>
+              <div class="input-container">
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="XXXXXXXXXX"
+                />
+                <p class="error-message" id="telefoneErro"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button type="submit" class="button secondary">Cadastrar</button>
+          </div>
+        </form>
+      </section>
+      <p id="mensagemValidacao"></p>
+
+      <div class="button-container">
+        <button
+          onclick="window.location.href='../index.html'"
+          class="button outlined"
+        >
+          Voltar
+        </button>
+
+        <div id="modalSucesso" class="modal">
+          <div class="modal-content">
+            <p id="modalMensagem">Formulário enviado com sucesso!</p>
+            <button id="fecharModal" class="button secondary">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>
+        Feito com ❤️ por Bruno Machado e o time da
+        <a href="https://brunomachadors.github.io/bugbuster/" target="_blank"
+          >BugBuster</a
+        >
+      </p>
+    </footer>
+    <script src="./lesson8.js"></script>
+  </body>
+</html>
