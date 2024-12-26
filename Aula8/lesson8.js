@@ -187,3 +187,8 @@ function validarTelefone(telefone) {
   // Retorna true se o telefone passar na validação, caso contrário false
   return regexTelefone.test(telefone);
 }
+
+function exibirErro(campo, erroElemento, mensagem) {
+  campo.classList.add('error-field'); // Adiciona a classe de erro
+  erroElemento.textContent = mensagem; // Exibe a mensagem de erro
+}
