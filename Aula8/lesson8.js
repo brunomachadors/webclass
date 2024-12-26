@@ -1,5 +1,11 @@
+// =======================
+// Seleção de elementos DOM
+// =======================
 const form = document.getElementById('formCadastro');
 const mensagem = document.getElementById('mensagemValidacao');
+const modal = document.getElementById('modalSucesso');
+const modalMensagem = document.getElementById('modalMensagem');
+const fecharModal = document.getElementById('fecharModal');
 
 // Elementos de erro
 const nomeErro = document.getElementById('nomeErro');
@@ -7,10 +13,95 @@ const emailErro = document.getElementById('emailErro');
 const senhaErro = document.getElementById('senhaErro');
 const dataNascimentoErro = document.getElementById('dataNascimentoErro');
 const telefoneErro = document.getElementById('telefoneErro');
+const paisErro = document.getElementById('paisErro');
 
+// =======================
+// Funções Utilitárias
+// =======================
+
+/**
+ * Valida a data de nascimento para verificar se o usuário tem pelo menos 18 anos.
+ * @param {string} dataNascimento - Data de nascimento no formato YYYY-MM-DD.
+ * @returns {boolean} - Retorna true se a idade for >= 18, caso contrário false.
+ */
+function validarDataNascimento(dataNascimento) {
+  const hoje = new Date();
+  const dataNascimentoDate = new Date(dataNascimento);
+
+  if (isNaN(dataNascimentoDate.getTime())) return false;
+
+  const idade = hoje.getFullYear() - dataNascimentoDate.getFullYear();
+  const mes = hoje.getMonth() - dataNascimentoDate.getMonth();
+  const dia = hoje.getDate() - dataNascimentoDate.getDate();
+
+  return idade > 18 || (idade === 18 && (mes > 0 || (mes === 0 && dia >= 0)));
+}
+
+/**
+ * Valida se o email está no formato correto.
+ * @param {string} email - Email para validação.
+ * @returns {boolean} - Retorna true se o email for válido, caso contrário false.
+ */
+function validarEmail(email) {
+  const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regexEmail.test(email);
+}
+
+/**
+ * Valida se o telefone contém entre 8 e 15 dígitos numéricos.
+ * @param {string} telefone - Telefone para validação.
+ * @returns {boolean} - Retorna true se o telefone for válido, caso contrário false.
+ */
+function validarTelefone(telefone) {
+  const regexTelefone = /^[0-9]{8,15}$/;
+  return regexTelefone.test(telefone);
+}
+
+/**
+ * Limpa os erros exibidos e remove a classe de erro dos campos.
+ */
+function resetarErros() {
+  const campos = [
+    form.nome,
+    form.email,
+    form.senha,
+    form.dataNascimento,
+    form.pais,
+    form.telefone,
+  ];
+
+  campos.forEach((campo) => campo.classList.remove('error-field'));
+
+  nomeErro.textContent = '';
+  emailErro.textContent = '';
+  senhaErro.textContent = '';
+  dataNascimentoErro.textContent = '';
+  paisErro.textContent = '';
+  telefoneErro.textContent = '';
+}
+
+/**
+ * Exibe uma mensagem de erro em um campo específico.
+ * @param {HTMLElement} campo - Campo do formulário onde o erro ocorreu.
+ * @param {HTMLElement} erroElemento - Elemento onde a mensagem de erro será exibida.
+ * @param {string} mensagem - Mensagem de erro.
+ */
+function exibirErro(campo, erroElemento, mensagem) {
+  campo.classList.add('error-field');
+  erroElemento.textContent = mensagem;
+}
+
+// =======================
+// Manipuladores de Eventos
+// =======================
+
+/**
+ * Evento de submissão do formulário.
+ */
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  console.log('Formulário submetido'); // Log inicial
+
+  console.log('Formulário submetido');
 
   // Obter valores dos campos
   const nome = form.nome.value.trim();
@@ -29,26 +120,21 @@ form.addEventListener('submit', (e) => {
     pais,
   });
 
-  // Resetar mensagens de erro e estilos
+  // Resetar erros antes da validação
   resetarErros();
 
   let erros = 0;
 
   // Validações
   if (!nome || nome.length < 3) {
-    console.log('Erro no nome');
     exibirErro(form.nome, nomeErro, 'O nome deve ter pelo menos 3 caracteres.');
     erros++;
   }
-
   if (!email || !validarEmail(email)) {
-    console.log('Erro no email');
     exibirErro(form.email, emailErro, 'Digite um email válido.');
     erros++;
   }
-
   if (!senha || senha.length < 6) {
-    console.log('Erro na senha');
     exibirErro(
       form.senha,
       senhaErro,
@@ -56,9 +142,7 @@ form.addEventListener('submit', (e) => {
     );
     erros++;
   }
-
   if (!dataNascimento || !validarDataNascimento(dataNascimento)) {
-    console.log('Erro na data de nascimento');
     exibirErro(
       form.dataNascimento,
       dataNascimentoErro,
@@ -66,36 +150,39 @@ form.addEventListener('submit', (e) => {
     );
     erros++;
   }
-
   if (!pais) {
-    console.log('Erro no país');
     exibirErro(form.pais, paisErro, 'Selecione um país.');
     erros++;
   }
-
   if (!telefone || !validarTelefone(telefone)) {
-    console.log('Erro no telefone');
     exibirErro(form.telefone, telefoneErro, 'Telefone inválido.');
     erros++;
   }
 
-  // Exibir mensagem final
+  // Exibir modal de sucesso se não houver erros
   if (erros === 0) {
     console.log('Formulário válido, exibindo mensagem de sucesso');
-    mensagem.textContent = 'Formulário enviado com sucesso!';
-    mensagem.style.color = 'green';
-
+    modal.style.display = 'flex';
     form.reset();
   } else {
     console.log(`Formulário inválido com ${erros} erros`);
-    mensagem.textContent = ''; // Garante que nenhuma mensagem de sucesso apareça com erros
+    mensagem.textContent = '';
   }
 });
 
+/**
+ * Evento para fechar a modal de sucesso.
+ */
+fecharModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+/**
+ * Evento para carregar os países dinamicamente no select.
+ */
 document.addEventListener('DOMContentLoaded', () => {
   const selectPais = document.getElementById('pais');
 
-  // Busca o arquivo JSON
   fetch('./countries.json')
     .then((response) => {
       if (!response.ok) {
@@ -104,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then((data) => {
-      // Adiciona as opções dinamicamente
       data.forEach((country) => {
         const option = document.createElement('option');
         option.value = country.code;
@@ -120,75 +206,3 @@ document.addEventListener('DOMContentLoaded', () => {
       selectPais.appendChild(errorOption);
     });
 });
-
-function validarDataNascimento(dataNascimento) {
-  const hoje = new Date();
-  const dataNascimentoDate = new Date(dataNascimento);
-
-  // Verificar se a data é válida
-  if (isNaN(dataNascimentoDate.getTime())) {
-    return false;
-  }
-
-  // Calcular a diferença de anos
-  const idade = hoje.getFullYear() - dataNascimentoDate.getFullYear();
-
-  // Verificar se a idade é inferior a 18
-  if (
-    idade < 18 ||
-    (idade === 18 &&
-      (hoje.getMonth() < dataNascimentoDate.getMonth() ||
-        (hoje.getMonth() === dataNascimentoDate.getMonth() &&
-          hoje.getDate() < dataNascimentoDate.getDate())))
-  ) {
-    return false;
-  }
-
-  return true;
-}
-
-function validarEmail(email) {
-  // Expressão regular para validar e-mail
-  const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-  // Retorna true se o e-mail passar na validação, caso contrário false
-  return regexEmail.test(email);
-}
-
-function resetarErros() {
-  // Lista de campos do formulário para limpar erros
-  const campos = [
-    form.nome,
-    form.email,
-    form.senha,
-    form.dataNascimento,
-    form.pais,
-    form.telefone,
-  ];
-
-  // Remove a classe de erro de cada campo
-  campos.forEach((campo) => {
-    campo.classList.remove('error-field');
-  });
-
-  // Limpa as mensagens de erro
-  nomeErro.textContent = '';
-  emailErro.textContent = '';
-  senhaErro.textContent = '';
-  dataNascimentoErro.textContent = '';
-  paisErro.textContent = '';
-  telefoneErro.textContent = '';
-}
-
-function validarTelefone(telefone) {
-  // Expressão regular para validar telefone (mínimo 8, máximo 15 dígitos)
-  const regexTelefone = /^[0-9]{8,15}$/;
-
-  // Retorna true se o telefone passar na validação, caso contrário false
-  return regexTelefone.test(telefone);
-}
-
-function exibirErro(campo, erroElemento, mensagem) {
-  campo.classList.add('error-field'); // Adiciona a classe de erro
-  erroElemento.textContent = mensagem; // Exibe a mensagem de erro
-}
