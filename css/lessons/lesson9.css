@@ -1,0 +1,139 @@
+.posts-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os posts */
+  gap: 15px; /* Espaçamento entre os posts */
+}
+
+.posts-list li {
+  width: 90%;
+  max-width: 600px;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #45474b;
+  color: #f5f5f5;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra padrão */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.posts-list li.selected {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais forte */
+  transform: scale(1.1); /* Pequeno efeito de crescimento */
+}
+
+.posts-list li h4 {
+  margin: 0 0 10px 0; /* Espaço abaixo do título */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  text-align: center; /* Centraliza o texto */
+}
+
+.posts-list li p {
+  margin: 0 0 10px 0; /* Espaçamento abaixo do parágrafo */
+  font-size: 1rem;
+  line-height: 1.5; /* Melhor espaçamento entre linhas */
+  text-align: center; /* Centraliza o texto */
+}
+
+.posts-list li .button-group {
+  display: flex; /* Alinha os botões lado a lado */
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 10px; /* Espaço entre os botões e o conteúdo do post */
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 10px;
+}
+
+.button-group.hidden {
+  display: none; /* Esconde os botões quando a classe 'hidden' é adicionada */
+}
+
+.edit-input,
+.edit-textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.edit-input:focus,
+.edit-textarea:focus {
+  outline: none;
+  border-color: #fad72c;
+  box-shadow: 0 0 5px rgba(250, 215, 44, 0.5);
+}
+
+#addPostForm {
+  display: flex;
+  flex-direction: column; /* Mantém os elementos em coluna */
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto; /* Centraliza o formulário na página */
+  align-items: center; /* Centraliza os itens dentro do formulário */
+}
+
+#addPostForm input,
+#addPostForm textarea {
+  width: 100%; /* Garante que os campos ocupem toda a largura do formulário */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+#addPostForm input:focus,
+#addPostForm textarea:focus {
+  outline: none;
+  border-color: #fad72c; /* Destaque na borda ao focar */
+  box-shadow: 0 0 5px rgba(250, 215, 44, 0.5); /* Adiciona um brilho */
+}
+
+#addPostForm button {
+  width: fit-content; /* Botão ocupa apenas o espaço necessário */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  resize: none; /* Evita redimensionamento */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #fad72c;
+  box-shadow: 0 0 5px rgba(250, 215, 44, 0.5);
+}
