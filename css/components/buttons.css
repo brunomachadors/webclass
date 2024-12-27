@@ -62,15 +62,20 @@
 }
 
 .button.delete:hover {
-  background-color: #c0392b; /* Vermelho mais escuro ao passar o mouse */
-  transform: scale(1.05); /* Adiciona um pequeno efeito de escala */
+  background-color: transparent;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+  transform: scale(1.05);
 }
 
 .button.edit {
-  background-color: #3498db; /* Azul claro */
+  background-color: #3498db;
   color: #fff;
 }
 
 .button.edit:hover {
-  background-color: #2980b9; /* Azul mais escuro */
+  background-color: transparent;
+  color: #2980b9;
+  border: 2px solid #2980b9;
+  transform: scale(1.05);
 }
