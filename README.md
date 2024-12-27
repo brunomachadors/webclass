@@ -37,7 +37,7 @@ Este projeto consiste em um curso introdutório de HTML, CSS e JavaScript dividi
 
 ## Estrutura do Projeto
 
-```plaintext
+```
 /
 ├── css/
 │   ├── components/
@@ -79,8 +79,37 @@ Este projeto consiste em um curso introdutório de HTML, CSS e JavaScript dividi
 │   ├── aula7.html
 │   ├── aula8.html
 │   ├── aula9.html
-├── assets/
-│   ├── imagens/
-│   │   ├── exemplo1.png
-│   │   ├── exemplo2.png
 └── README.md
+```
+
+## Funcionalidades
+
+- **Exemplos interativos:** Cada aula inclui exemplos práticos para demonstração dos conceitos.
+- **Sessão de Exercícios:** Espaços para os alunos praticarem e aplicarem o que foi aprendido.
+- **Conteúdo Dinâmico:** Uso de elementos visuais e exemplos práticos para engajar o aluno.
+- **Consumo de APIs:** Aula prática que ensina como realizar requisições GET, POST, DELETE e UPDATE usando JavaScript.
+- **Validação de Formulários:** Aula que cobre boas práticas de validação para melhorar a experiência do usuário.
+
+## Instalação e Execução
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/brunomachadors/webclass.git
+   ```
+
+2. Navegue até a pasta do projeto:
+
+   ```bash
+   cd webclass
+   ```
+
+3. Abra o arquivo `index.html` no navegador.
+
+## Tecnologias Utilizadas
+
+- **HTML5:** Para a estrutura do conteúdo.
+- **CSS3:** Para estilização dos elementos visuais.
+- **JavaScript:** Para adicionar interatividade e lógica nas aulas.
+
+
