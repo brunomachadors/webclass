@@ -13,7 +13,7 @@ function fetchPokemon() {
             card.className = 'card';
 
             const img = document.createElement('img');
-            img.src = details.sprites.front_default;
+            img.src = details.sprites.other['official-artwork'].front_default;
             img.alt = `${details.name}`;
 
             const name = document.createElement('h3');
